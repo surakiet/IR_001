@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:visibility="visible">
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="362dp" android:id="@+id/topbg" android:background="@drawable/topbg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/bottombg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:background="@drawable/bottombg"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/topbg" app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" app:layout_constraintVertical_bias="0.0"/>
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="0dp"
+            android:layout_height="71dp"
+            android:background="@android:color/white"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/headerbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/home_page" android:id="@+id/background"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:visibility="gone"/>
+    <ImageView
+            android:layout_width="87dp"
+            android:layout_height="64dp" app:srcCompat="@drawable/ir_app_icon"
+            android:id="@+id/logo"
+            app:layout_constraintStart_toStartOf="@+id/headerbar" android:layout_marginStart="29dp"
+            app:layout_constraintTop_toTopOf="@+id/headerbar"
+            android:visibility="visible" android:layout_marginTop="4dp"/>
+    <ImageView
+            android:layout_width="42dp"
+            android:layout_height="38dp" app:srcCompat="@drawable/ic_action_name"
+            android:id="@+id/headericonbar"
+            app:layout_constraintTop_toTopOf="@+id/headerbar" app:layout_constraintEnd_toEndOf="@+id/headerbar"
+            android:layout_marginEnd="31dp" android:visibility="visible" android:layout_marginTop="17dp"/>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:id="@+id/slidebar"
+            android:background="@color/colorpink"
+            app:layout_constraintTop_toBottomOf="@+id/headerbar" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="55dp" app:srcCompat="@drawable/ic_action_slidebar"
+            android:id="@+id/slideicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/headerbar"
+            android:visibility="visible" app:layout_constraintHorizontal_bias="0.498"
+            android:layout_marginTop="58dp" app:layout_constraintTop_toTopOf="@+id/background"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="345dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slidebar" android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp" android:id="@+id/tabbar" android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button2" android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:elevation="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button3" android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:elevation="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button4" android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:elevation="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button5" android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:elevation="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button" android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:elevation="10dp"/>
+    </LinearLayout>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="238dp"
+            android:id="@+id/maincard" android:background="@drawable/cardradius"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="33dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="33dp" android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/tabbar"/>
+    <TextView
+            android:text="STOCKS  PRICE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texttitlemain"
+            app:layout_constraintStart_toStartOf="@+id/maincard" android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp" app:layout_constraintTop_toTopOf="@+id/maincard"
+            android:textColor="#211D1E" android:fontFamily="@font/rubik" android:textSize="19sp"/>
+    <TextView
+            android:text="(TOP)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texttitlemaincomment"
+            app:layout_constraintStart_toEndOf="@+id/texttitlemain"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="@+id/maincard" android:textSize="12sp"
+            android:fontFamily="@font/rubik" android:textColor="#1E1B1C" android:layout_marginStart="6dp"/>
+    <TextView
+            android:text="3 seconds ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texttime"
+            app:layout_constraintEnd_toEndOf="@+id/maincard" android:layout_marginEnd="47dp"
+            app:layout_constraintTop_toTopOf="@+id/maincard" android:layout_marginTop="33dp" android:autoText="false"
+            android:textColor="#191516" android:fontFamily="@font/rubik_light" android:textSize="10sp"/>
+    <TextView
+            android:text="Last update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texttime2"
+            app:layout_constraintEnd_toEndOf="@+id/maincard" android:layout_marginEnd="47dp"
+            app:layout_constraintTop_toTopOf="@+id/maincard" android:layout_marginTop="23dp" android:autoText="false"
+            android:textColor="#191516" android:fontFamily="@font/rubik_light" android:textSize="10sp"/>
+    <View
+            android:layout_width="21dp"
+            android:layout_height="21dp" android:id="@+id/reicon" android:background="@drawable/iconre"
+            app:layout_constraintEnd_toEndOf="@+id/maincard"
+            android:layout_marginEnd="19dp" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toTopOf="@+id/maincard"/>
+    <TextView
+            android:text="73.50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnum"
+            app:layout_constraintStart_toStartOf="@+id/maincard"
+            app:layout_constraintTop_toBottomOf="@+id/texttitlemain" android:textColor="#231F20"
+            android:fontFamily="@font/roboto_bold" android:textSize="47sp" android:layout_marginTop="10dp"
+            android:layout_marginStart="36dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/icondown" android:id="@+id/icondown"
+            app:layout_constraintEnd_toStartOf="@+id/textnum2"
+            android:layout_marginTop="88dp" app:layout_constraintTop_toTopOf="@+id/maincard"
+            android:layout_marginEnd="1dp"/>
+    <TextView
+            android:text="-0.34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnum2"
+            app:layout_constraintStart_toStartOf="@+id/maincard"
+            app:layout_constraintTop_toBottomOf="@+id/texttitlemain" android:textColor="#EC1C24"
+            android:fontFamily="@font/roboto_bold" android:textSize="20sp" android:layout_marginTop="40dp"
+            android:layout_marginStart="248dp"/>
+    <View
+            android:layout_width="312dp"
+            android:layout_height="1dp" android:id="@+id/hr"
+            app:layout_constraintStart_toStartOf="@+id/maincard"
+            app:layout_constraintEnd_toEndOf="@+id/maincard" app:layout_constraintTop_toTopOf="@+id/maincard"
+            android:layout_marginTop="122dp" android:layout_marginEnd="2dp"
+            android:background="@android:color/darker_gray"/>
+    <TextView
+            android:text="Open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/opentext"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#6C6D70" android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"/>
+    <TextView
+            android:text="118.69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnumopen"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#403F41" android:layout_marginStart="63dp"
+            android:layout_marginTop="38dp"/>
+    <TextView
+            android:text="119.80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnumopen2"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#403F41" android:layout_marginStart="63dp"
+            android:layout_marginTop="15dp"/>
+    <TextView
+            android:text="750.80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnumopen3"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#403F41" android:layout_marginStart="272dp"
+            android:layout_marginTop="39dp"/>
+    <TextView
+            android:text="318,000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnumopen4"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#403F41" android:layout_marginStart="272dp"
+            android:layout_marginTop="15dp"/>
+    <TextView
+            android:text="19/02/2019  18 : 20  (GMT+02:00)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textnumopen5"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#403F41" android:layout_marginStart="16dp"
+            android:layout_marginTop="68dp"/>
+    <TextView
+            android:text="High"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/hightext"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#6C6D70" android:layout_marginStart="16dp"
+            android:layout_marginTop="38dp"/>
+    <TextView
+            android:text="Vol."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/voltext"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#6C6D70" android:layout_marginStart="230dp"
+            android:layout_marginTop="14dp"/>
+    <TextView
+            android:text="High"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/hightext2"
+            app:layout_constraintStart_toStartOf="@+id/maincard" app:layout_constraintTop_toBottomOf="@+id/textnum"
+            android:fontFamily="@font/rubik" android:textColor="#6C6D70" android:layout_marginStart="230dp"
+            android:layout_marginTop="38dp"/>
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottombg"
+            app:layout_constraintBottom_toTopOf="@id/footer" app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintVertical_bias="1.0">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:id="@+id/scoll1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp" android:id="@+id/subcard1"
+                        android:background="@drawable/subcardradius" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="33dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="33dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.489"
+                        android:layout_marginTop="22dp" android:visibility="visible"/>
+                <TextView
+                        android:text="NEWS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttitle"
+                        android:fontFamily="@font/roboto_bold" android:textColor="#231F20" android:textSize="18sp"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard1"
+                        app:layout_constraintTop_toTopOf="@+id/subcard1" android:layout_marginTop="13dp"/>
+                <TextView
+                        android:text="1M  ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttimecomm"
+                        app:layout_constraintEnd_toEndOf="@+id/subcard1" android:layout_marginEnd="18dp"
+                        app:layout_constraintTop_toTopOf="@+id/subcard1" android:textColor="#6B6D70"
+                        android:fontFamily="@font/rubik" android:layout_marginTop="17dp" android:textSize="13sp"/>
+                <TextView
+                        android:text="solutions of the BOD' Meeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent1"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        app:layout_constraintTop_toBottomOf="@+id/texttitle"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard1"
+                        android:textSize="15sp"/>
+                <TextView
+                        android:text="regarding Dividend payment...(Read)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent2"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        app:layout_constraintTop_toBottomOf="@+id/texttitle"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard1"
+                        android:textSize="15sp" android:layout_marginTop="18dp"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp" android:id="@+id/subcard2"
+                        android:background="@drawable/subcardradius" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="33dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="33dp"
+                        app:layout_constraintHorizontal_bias="0.489" app:layout_constraintTop_toBottomOf="@+id/subcard1"
+                        android:visibility="visible"/>
+                <TextView
+                        android:text="NEWS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttitle2"
+                        android:fontFamily="@font/roboto_bold" android:textColor="#231F20" android:textSize="18sp"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard2"
+                        android:layout_marginTop="13dp" app:layout_constraintTop_toTopOf="@+id/subcard2"/>
+                <TextView
+                        android:text="2M  ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttimecomm2"
+                        app:layout_constraintEnd_toEndOf="@+id/subcard2" android:layout_marginEnd="18dp"
+                        app:layout_constraintTop_toTopOf="@+id/subcard2" android:textColor="#6B6D70"
+                        android:fontFamily="@font/rubik" android:layout_marginTop="15dp" android:textSize="13sp"/>
+                <TextView
+                        android:text="solutions of the BOD' Meeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        android:textSize="15sp" android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/subcard2"
+                        app:layout_constraintTop_toBottomOf="@+id/texttitle2"/>
+                <TextView
+                        android:text="regarding Dividend payment...(Read)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent3"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        android:textSize="15sp" app:layout_constraintStart_toStartOf="@+id/subcard2"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginStart="16dp" app:layout_constraintTop_toBottomOf="@+id/texttitle2"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp" android:id="@+id/subcard3"
+                        android:background="@drawable/subcardradius" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="33dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="33dp"
+                        app:layout_constraintHorizontal_bias="0.489" app:layout_constraintTop_toBottomOf="@+id/subcard2"
+                        android:visibility="visible"/>
+                <TextView
+                        android:text="solutions of the BOD' Meeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent4"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@+id/subcard3"
+                        app:layout_constraintTop_toBottomOf="@+id/texttitle3" android:layout_marginStart="16dp"/>
+                <TextView
+                        android:text="2M  ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttimecomm3"
+                        app:layout_constraintEnd_toEndOf="@+id/subcard3" android:layout_marginEnd="18dp"
+                        app:layout_constraintTop_toTopOf="@+id/subcard3" android:textColor="#6B6D70"
+                        android:fontFamily="@font/rubik" android:layout_marginTop="13dp" android:textSize="13sp"/>
+                <TextView
+                        android:text="regarding Dividend payment...(Read)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textcontent5"
+                        android:fontFamily="@font/rubik_light" android:textColor="#2C2729"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard3"
+                        app:layout_constraintTop_toBottomOf="@+id/texttitle3" android:layout_marginTop="18dp"/>
+                <TextView
+                        android:text="NEWS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/texttitle3"
+                        android:fontFamily="@font/roboto_bold" android:textColor="#231F20" android:textSize="18sp"
+                        android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="@+id/subcard3"
+                        app:layout_constraintTop_toTopOf="@+id/subcard3" android:layout_marginTop="13dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:id="@+id/footer" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/bottombg" app:layout_constraintHorizontal_bias="0.0"
+            android:background="@android:color/white"
+            android:visibility="visible" app:layout_constraintBottom_toBottomOf="parent"/>
+    <View
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:id="@+id/iconhome" android:background="@drawable/iconhome"
+            app:layout_constraintStart_toStartOf="@id/footer" android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toTopOf="@+id/footer"/>
+    <View
+            android:layout_width="32dp"
+            android:layout_height="31dp" android:id="@+id/icongraph" android:background="@drawable/icongraph"
+            app:layout_constraintEnd_toStartOf="@+id/iconnew"
+            app:layout_constraintStart_toEndOf="@+id/iconhome"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toTopOf="@+id/footer"/>
+    <View
+            android:layout_width="32dp"
+            android:layout_height="32dp" android:id="@+id/iconnew" android:background="@drawable/iconnew"
+            app:layout_constraintEnd_toStartOf="@+id/iconcamera"
+            app:layout_constraintStart_toEndOf="@+id/iconhome" android:layout_marginStart="3dp"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toTopOf="@+id/footer"/>
+    <View
+            android:layout_width="33dp"
+            android:layout_height="32dp" android:id="@+id/iconcalen" android:background="@drawable/iconcale"
+            app:layout_constraintEnd_toStartOf="@+id/iconcamera"
+            app:layout_constraintStart_toEndOf="@+id/iconnew"
+            android:layout_marginStart="4dp" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toTopOf="@+id/footer"/>
+    <View
+            android:layout_width="40dp"
+            android:layout_height="38dp" android:id="@+id/iconcamera"
+            android:background="@drawable/iconcaamera"
+            app:layout_constraintEnd_toEndOf="@id/footer" android:layout_marginEnd="32dp"
+            android:layout_marginTop="10dp" app:layout_constraintTop_toTopOf="@id/footer"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
